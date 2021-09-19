@@ -2,7 +2,9 @@ const radio = require('./utils/radio.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.login('Njc5MzU5NDY5MjQyNjc5MzE4.XkwoMw.15Y58ezzuD9xb_c5jQxUaIn6Iy8');
+require('dotenv').config()
+
+client.login(process.env.CLIENT_TOKEN);
 
 client.on('message', async message => {
 	if (!message.guild) return;
